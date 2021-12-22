@@ -1,30 +1,27 @@
 import java.util.Scanner;
 
 public class StringTest {
-    String string;
+    private String string;
     Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        StringTest stringTest = new StringTest("");
-
-        String[] splitString = stringTest.getSplitString();
-        String subString = stringTest.getRemoveParenthesis();
-        int index = stringTest.setStringIndex();
-        char word = stringTest.getStringIndex(index);
+    public String getString() {
+        return string;
     }
 
-    public StringTest(String string) {
+    public void setString(String string) {
         this.string = string;
     }
 
     //요구사항1
     public String[] getSplitString() {
+        string = getString();
         return string.split(",");
     }
 
     //요구사항2
     public String getRemoveParenthesis() {
         int open, close;
+        string = getString();
         open = string.indexOf('(');
         close = string.indexOf(')');
         return string.substring(open + 1, close);
@@ -32,6 +29,7 @@ public class StringTest {
 
     //요구사항3
     public int setStringIndex() {
+        string = getString();
         System.out.println("index 를 입력하세요: ");
         int index = scanner.nextInt();
         indexOutOfBoundsException(index);
@@ -39,6 +37,7 @@ public class StringTest {
     }
 
     public char getStringIndex(int index) {
+        string = getString();
         return string.charAt(index);
     }
 

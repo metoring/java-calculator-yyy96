@@ -1,6 +1,7 @@
 public class Application {
 
     public static void main(String[] args) {
-        StringTest stringTest = new StringTest();
+        StringClassTest stringClassTest = new StringClassTest();
+        SetCollectionTest setCollectionTest = new SetCollectionTest();
     }
 }
